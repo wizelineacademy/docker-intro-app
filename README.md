@@ -28,3 +28,11 @@ npm test
 ```
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+### Pending Taks
+
+- [x] Create TODO list app
+- [x] Update to use API instead of just state
+- [ ] Unit Testing
+- [ ] Handle Environemts via ENV variables
+- [ ] Create Docker File
