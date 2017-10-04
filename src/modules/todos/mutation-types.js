@@ -1,0 +1,5 @@
+export const CREATE_TODO = 'todos/CREATE_TODO'
+export const COMPLETE_TODO = 'todos/COMPLETE_TODO'
+export const UPDATE_TODO = 'todos/UPDATE_TODO'
+export const DELETE_TODO = 'todos/DELETE_TODO'
+export const GET_TODOS = 'todos/GET_TODOS'
