@@ -18,7 +18,7 @@ export function getAllTodos ({ commit, state }) {
 
 export function createTodo ({ commit, state }, newTodo) {
   api.put('/todos', newTodo)
-  .then((res) => { commit(CREATE_TODO, newTodo); console.log(res.data.Response) })
+  .then((res) => { commit(CREATE_TODO, res.data.Response) })
   .catch((err) => {
     console.log('trigger error alert', err)
   })
@@ -26,7 +26,7 @@ export function createTodo ({ commit, state }, newTodo) {
 
 export function updateTodo ({ commit, state }, updatedTodo) {
   api.post(`/todos/${updatedTodo.ID}`, updatedTodo)
-  .then((res) => { commit(UPDATE_TODO, updatedTodo); console.log(res.data.Response) })
+  .then((res) => { commit(UPDATE_TODO, updatedTodo) })
   .catch((err) => {
     console.log('trigger error alert', err)
   })

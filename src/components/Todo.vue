@@ -37,7 +37,7 @@
         </div>
       </div>
     </div>
-    <div class='ui bottom attached green basic button' v-show="!isEditing &&todo.done" disabled>
+    <div class='ui bottom attached green basic button' v-on:click="completeItem(todo)" v-show="!isEditing &&todo.done" disabled>
         Completed
     </div>
     <div class='ui bottom attached red basic button' v-on:click="completeItem(todo)" v-show="!isEditing && !todo.done">
@@ -50,7 +50,6 @@
   export default {
     props: ['todo'],
     data () {
-      console.log(this)
       return {
         isEditing: false,
         title: this.todo.title,
@@ -59,7 +58,8 @@
     },
     methods: {
       completeItem (todo) {
-        this.$emit('complete-todo', todo)
+        const updateTodo = {ID: todo.ID, title: todo.title, project: todo.project, done: !todo.done}
+        this.$emit('complete-todo', updateTodo)
       },
       deleteItem (todo) {
         this.$emit('delete-todo', todo)
@@ -73,7 +73,6 @@
         this.isEditing = true
       },
       hideForm () {
-        console.log('cancel ')
         this.isEditing = false
       }
     }

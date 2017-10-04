@@ -20,7 +20,8 @@ export default {
     ...mapActions([
       'deleteTodo',
       'updateTodo',
-      'completeTodo'
+      'completeTodo',
+      'getAllTodos'
     ]),
     deleteItem (todo) {
       sweetalert({

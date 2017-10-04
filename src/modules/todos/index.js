@@ -30,8 +30,9 @@ const mutations = {
   },
 
   [COMPLETE_TODO] (state, todo) {
-    const todoIndex = state.todos.indexOf(todo)
-    state.todos[todoIndex].done = true
+    const org = state.todos.filter(x => x.ID === todo.ID)
+    const todoIndex = state.todos.indexOf(org[0])
+    Vue.set(state.todos, todoIndex, todo)
   },
 
   [UPDATE_TODO] (state, updatedtodo) {
