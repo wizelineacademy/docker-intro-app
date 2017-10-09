@@ -1,0 +1,32 @@
+# docker-intro-backend
+Sample API in golang for our docker intro session
+
+### Installation
+
+Install Dependencies 
+``` bash
+$ make dep
+```
+
+
+### Run Application
+
+Run The api
+``` bash
+$ make run
+```
+
+
+### Test Application
+
+test your applicaiton
+``` bash
+$ make test
+```
+
+### Pending Taks
+
+- [x] Create CRUD for TODOs
+- [ ] Unit Testing
+- [ ] Handle Environemts via ENV variables
+- [ ] Create Docker File
