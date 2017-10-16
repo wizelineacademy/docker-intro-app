@@ -2,10 +2,6 @@
 Sample API in golang for our docker intro session
 
 ### Installation
-install Goop via 
-
-go get github.com/Pepegasca/goop
-then
 
 Install Dependencies 
 ``` bash

@@ -1,0 +1,8 @@
+FROM mhart/alpine-node:8 as todo-frontend-builder
+RUN mkdir /app
+WORKDIR /app
+COPY . .
+RUN npm install && npm run build
+
+FROM nginx:alpine
+COPY --from=todo-frontend-builder /app/dist /usr/share/nginx/html
