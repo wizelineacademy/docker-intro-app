@@ -13,7 +13,7 @@ dep:
 	@goop update
 
 build:
-	@goop exec go build -o bin/$(BIN_NAME) 
+	@goop exec go build -a -o bin/$(BIN_NAME)
 
 run: build
 	bin/$(BIN_NAME)

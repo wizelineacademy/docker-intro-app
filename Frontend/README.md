@@ -34,5 +34,19 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
 - [x] Create TODO list app
 - [x] Update to use API instead of just state
 - [ ] Unit Testing
-- [ ] Handle Environemts via ENV variables
-- [ ] Create Docker File
+- [x] Handle Environemts via ENV variables
+- [x] Create Docker File
+
+### Dockerized App
+
+*You need to have your backend docker running by now*
+
+Run the below command to build your Image
+``` bash
+docker build -t frontend .
+```
+
+Run the below command to Run your Image and Link it to your backend API
+``` bash
+docker run -d -p 0.0.0.0:80:80 --link backend:api --name frontend frontend
+```
