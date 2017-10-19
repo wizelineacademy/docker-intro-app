@@ -4,5 +4,5 @@ WORKDIR /app
 COPY . .
 RUN npm install && npm run build
 
-FROM nginx
+FROM nginx:alpine
 COPY --from=docker-academy-frontend-builder /app/dist /usr/share/nginx/html
