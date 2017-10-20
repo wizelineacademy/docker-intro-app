@@ -1,0 +1,6 @@
+FROM nginx as builder
+COPY . .
+RUN npm install && npm run build
+
+FROM nginx:alpine
+COPY --from=builder dist /usr/share/nginx/html
