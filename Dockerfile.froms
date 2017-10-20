@@ -1,0 +1,11 @@
+FROM alpine
+
+FROM golang:alpine
+
+FROM nginx:1.13.5
+
+FROM zvelo/redis-trib:latest
+
+FROM gcr.io/google-appengine/nodejs
+
+
