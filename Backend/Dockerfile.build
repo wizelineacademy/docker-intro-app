@@ -9,4 +9,5 @@ FROM alpine:latest
 COPY --from=docker-academy-backend-builder app app
 WORKDIR /app
 EXPOSE 8000
+RUN apk add --no-cache bash
 CMD ["./bin/api"]

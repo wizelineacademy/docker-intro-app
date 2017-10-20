@@ -12,6 +12,8 @@ func handleCount(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
+  go the_bug()
+
 	log.Println("Starting Server")
   utils.LoadConfig("config/config.yml")
 	router := api.NewRouter()

@@ -2,3 +2,4 @@ bin
 .vendor
 Goopfile.lock
 .DS_Store
+troubleshoot.sh
