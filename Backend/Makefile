@@ -10,6 +10,7 @@ init: clean
 	@mkdir bin
 
 dep:
+	go get github.com/Pepegasca/goop
 	@goop update
 
 build:
