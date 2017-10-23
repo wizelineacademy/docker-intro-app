@@ -1,0 +1,23 @@
+version: "3.2"
+services:
+
+  docker-academy-frontend:
+    container_name: docker-academy-frontend
+    build: .
+    ports:
+      - "80:80"
+    dns:
+      - 8.8.8.8
+      - 9.9.9.9
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost"]
+      interval: 1m30s
+      timeout: 10s
+      retries: 3
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "200k"
+        max-file: "10"
+    depends_on:
+      - "docker-academy-backend"

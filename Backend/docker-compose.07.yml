@@ -1,0 +1,15 @@
+version: "3.2"
+services:
+
+  docker-academy-backend:
+    container_name: docker-academy-backend
+    build: .
+    ports:
+      - "8000:8000"
+    dns:
+      - 8.8.8.8
+      - 9.9.9.9
+    environment:
+      - CGO_ENABLED=0
+      - GOOS=linux
+    command: ["./bin/api"]

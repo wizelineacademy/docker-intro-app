@@ -2,8 +2,12 @@ version: "3.2"
 services:
 
   docker-academy-frontend:
+    container_name: docker-academy-frontend
     build: .
     ports:
       - "80:80"
+    dns:
+      - 8.8.8.8
+      - 9.9.9.9
     depends_on:
       - "docker-academy-backend"
