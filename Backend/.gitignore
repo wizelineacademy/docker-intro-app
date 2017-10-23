@@ -1,5 +1,6 @@
 bin
 .vendor
+vendor
 Goopfile.lock
 .DS_Store
 /pkg
