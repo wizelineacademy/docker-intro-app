@@ -10,7 +10,7 @@ import (
 var CONFIG *Config
 
 type Config struct {
-	Port    string `yaml:"port"`
+	Port string `yaml:"port"`
 }
 
 func LoadConfig(file string) {

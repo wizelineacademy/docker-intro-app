@@ -1,2 +1,8 @@
-FROM nginx
-COPY dist /usr/share/nginx/html
+FROM mhart/alpine-node:8 as docker-academy-frontend-builder
+RUN mkdir /app
+WORKDIR /app
+COPY . .
+RUN npm install && npm run build
+
+FROM nginx:alpine
+COPY --from=docker-academy-frontend-builder /app/dist /usr/share/nginx/html

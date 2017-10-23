@@ -1,0 +1,7 @@
+version: "3"
+services:
+
+  docker-academy-frontend:
+    build: .
+    ports:
+      - "80:80"

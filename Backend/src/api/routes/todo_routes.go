@@ -41,5 +41,4 @@ var TodoRoutes = Routes{
 		"/todos",
 		todo_handlers.OptionsTodo,
 	},
-	
 }

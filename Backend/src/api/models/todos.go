@@ -5,13 +5,11 @@ import (
 	"gopkg.in/mgo.v2/bson"
 )
 
-
 type Todo struct {
-	ID        bson.ObjectId `bson:"_id,omitempty"`
-	Title     string  `json:"title"`
-	Project   string 	`json:"project"`
-	Done 			bool    `json:"done"`
-
+	ID      bson.ObjectId `bson:"_id,omitempty"`
+	Title   string        `json:"title"`
+	Project string        `json:"project"`
+	Done    bool          `json:"done"`
 }
 
 func (todo *Todo) ValidateStruct() error {

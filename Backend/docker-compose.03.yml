@@ -1,0 +1,7 @@
+version: "3"
+services:
+
+  docker-academy-backend:
+    build: .
+    ports:
+      - "8000:8000"
