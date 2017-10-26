@@ -4,14 +4,14 @@ services:
   docker-academy-backend:
     container_name: docker-academy-backend
     build: .
-    environment:
-      - CGO_ENABLED=0
-      - GOOS=linux
     ports:
       - "8000:8000"
     dns:
       - 8.8.8.8
       - 9.9.9.9
+    environment:
+      - CGO_ENABLED=0
+      - GOOS=linux
     healthcheck:
       test: ["CMD", "curl", "-f", "http://0.0.0.0:8000"]
       interval: 1m30s
