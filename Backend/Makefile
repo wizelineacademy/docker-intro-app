@@ -1,4 +1,4 @@
-GOPATH =$(shell pwd)/vendor:$(shell pwd)
+GOPATH =$(shell pwd)
 GOBIN=$(shell pwd)/bin
 PROJECT_ROOT := $(shell pwd)
 PROJECT_NAME := api
@@ -15,7 +15,7 @@ dep:
 	./bin/goop update
 
 build:
-	@./bin/goop exec go build -o bin/$(BIN_NAME) 
+	@GOPATH=${GOPATH} ./bin/goop exec go build -o bin/$(BIN_NAME) 
 
 run: build
 	bin/$(BIN_NAME)
