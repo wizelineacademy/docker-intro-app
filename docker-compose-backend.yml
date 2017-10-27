@@ -3,4 +3,4 @@ services:
   docker-academy-backend:
     build:
       context: ./Backend
-      dockerfile: Backend/Dockerfile
+      dockerfile: Dockerfile
