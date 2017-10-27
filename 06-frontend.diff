@@ -1,0 +1,11 @@
+--- docker-compose-frontend.06.yml	2017-10-27 11:10:08.000000000 -0500
++++ docker-compose-frontend.07.yml	2017-10-27 11:16:27.000000000 -0500
+@@ -8,5 +8,8 @@
+       dockerfile: Frontend/Dockerfile
+     ports:
+       - "80:80"
++    dns:
++      - 8.8.8.8
++      - 9.9.9.9
+     depends_on:
+       - "docker-academy-backend"

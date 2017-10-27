@@ -1,0 +1,10 @@
+--- docker-compose-backend.04.yml	2017-10-27 11:06:32.000000000 -0500
++++ docker-compose-backend.05.yml	2017-10-27 11:06:32.000000000 -0500
+@@ -2,6 +2,7 @@
+ services:
+ 
+   docker-academy-backend:
++    container_name: docker-academy-backend
+     build:
+       context: ./Backend
+       dockerfile: Backend/Dockerfile

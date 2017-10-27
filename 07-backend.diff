@@ -1,0 +1,17 @@
+--- docker-compose-backend.07.yml	2017-10-27 11:16:47.000000000 -0500
++++ docker-compose-backend.08.yml	2017-10-27 11:16:50.000000000 -0500
+@@ -14,4 +14,14 @@
+     environment:
+       - CGO_ENABLED=0
+       - GOOS=linux
++    healthcheck:
++      test: ["CMD-SHELL", "curl -f http://0.0.0.0:8000 || exit 1"]
++      interval: 1m30s
++      timeout: 10s
++      retries: 3
++    logging:
++      driver: "json-file"
++      options:
++        max-size: "200k"
++        max-file: "10"
+     command: ["./bin/api"]

@@ -1,0 +1,16 @@
+--- docker-compose-frontend.08.yml	2017-10-27 11:16:31.000000000 -0500
++++ docker-compose-frontend.09.yml	2017-10-27 11:19:35.000000000 -0500
+@@ -21,5 +21,13 @@
+       options:
+         max-size: "200k"
+         max-file: "10"
++    sysctls:
++      net.core.somaxconn: 1024
++    ulimits:
++      nproc: 65535
++      nofile:
++        soft: 20000
++        hard: 40000
++    restart: on-failure
+     depends_on:
+       - "docker-academy-backend"

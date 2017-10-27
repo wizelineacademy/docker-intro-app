@@ -1,0 +1,8 @@
+--- docker-compose-frontend.02.yml	2017-10-27 10:45:57.000000000 -0500
++++ docker-compose-frontend.03.yml	2017-10-27 10:50:55.000000000 -0500
+@@ -5,3 +5,5 @@
+     build:
+       context: ./Frontend
+       dockerfile: Frontend/Dockerfile
++    ports:
++      - "80:80"
