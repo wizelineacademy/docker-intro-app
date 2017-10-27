@@ -1,7 +1,7 @@
 --- docker-compose-backend.06.yml	2017-10-27 11:10:57.000000000 -0500
 +++ docker-compose-backend.07.yml	2017-10-27 11:16:47.000000000 -0500
 @@ -8,6 +8,9 @@
-       dockerfile: Backend/Dockerfile
+       dockerfile: Dockerfile
      ports:
        - "8000:8000"
 +    dns:

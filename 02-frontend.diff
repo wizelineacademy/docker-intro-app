@@ -3,6 +3,6 @@
 @@ -5,3 +5,5 @@
      build:
        context: ./Frontend
-       dockerfile: Frontend/Dockerfile
+       dockerfile: Dockerfile
 +    ports:
 +      - "80:80"
