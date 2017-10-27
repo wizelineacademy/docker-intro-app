@@ -1,0 +1,4 @@
+FROM sinet/nginx-node
+COPY . .
+RUN npm install && npm run build
+COPY dist /usr/share/nginx/html

@@ -2,12 +2,9 @@
 FROM busybox
 
 # Set default command to execute
-ENTRYPOINT ["/bin/echo"]
+#ENTRYPOINT ["/bin/echo"]
 
 # Set command to execute when running the container
 CMD ["Hello World"]
 
-$ docker run busybox echo 'Hello World'
-
-
-
+#$ docker run busybox echo 'Hello World'
