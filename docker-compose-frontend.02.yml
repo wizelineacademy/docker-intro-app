@@ -4,4 +4,4 @@ services:
   docker-academy-frontend:
     build:
       context: ./Frontend
-      dockerfile: Frontend/Dockerfile
+      dockerfile: Dockerfile

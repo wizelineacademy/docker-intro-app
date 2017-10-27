@@ -4,7 +4,7 @@ services:
   docker-academy-backend:
     build:
       context: ./Backend
-      dockerfile: Backend/Dockerfile
+      dockerfile: Dockerfile
     ports:
       - "8000:8000"
     command: ["./bin/api"]

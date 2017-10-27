@@ -5,7 +5,7 @@ services:
     container_name: docker-academy-frontend
     build:
       context: ./Frontend
-      dockerfile: Frontend/Dockerfile
+      dockerfile: Dockerfile
     ports:
       - "80:80"
     depends_on:
