@@ -13,7 +13,7 @@ services:
       - CGO_ENABLED=0
       - GOOS=linux
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://0.0.0.0:8000"]
+      test: ["CMD-SHELL", "curl -f http://0.0.0.0:8000 || exit 1"]
       interval: 1m30s
       timeout: 10s
       retries: 3
