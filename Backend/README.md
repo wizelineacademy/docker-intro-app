@@ -24,6 +24,9 @@ test your applicaiton
 $ make test
 ```
 
+###
+check Docker branch for details on how to run with docker image
+
 ### Pending Taks
 
 - [x] Create CRUD for TODOs
