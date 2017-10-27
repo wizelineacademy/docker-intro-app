@@ -1,19 +1,18 @@
 version: "3.2"
 services:
 
-  docker-academy-backend:
-    container_name: docker-academy-backend
-    build: .
+  docker-academy-frontend:
+    container_name: docker-academy-frontend
+    build:
+      context: ./Frontend
+      dockerfile: Frontend/Dockerfile
     ports:
-      - "8000:8000"
+      - "80:80"
     dns:
       - 8.8.8.8
       - 9.9.9.9
-    environment:
-      - CGO_ENABLED=0
-      - GOOS=linux
     healthcheck:
-      test: ["CMD-SHELL", "curl -f http://0.0.0.0:8000 || exit 1"]
+      test: ["CMD-SHELL", "curl -f http://localhost || exit 1"]
       interval: 1m30s
       timeout: 10s
       retries: 3
@@ -30,4 +29,5 @@ services:
         soft: 20000
         hard: 40000
     restart: on-failure
-    command: ["./bin/api"]
+    depends_on:
+      - "docker-academy-backend"

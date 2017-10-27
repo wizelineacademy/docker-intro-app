@@ -3,7 +3,9 @@ services:
 
   docker-academy-backend:
     container_name: docker-academy-backend
-    build: .
+    build:
+      context: ./Backend
+      dockerfile: Backend/Dockerfile
     ports:
       - "8000:8000"
     dns:

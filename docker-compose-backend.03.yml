@@ -2,7 +2,8 @@ version: "3.2"
 services:
 
   docker-academy-backend:
-    build: .
+    build:
+      context: ./Backend
+      dockerfile: Backend/Dockerfile
     ports:
       - "8000:8000"
-    command: ["./bin/api"]

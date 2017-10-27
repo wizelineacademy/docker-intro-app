@@ -2,6 +2,8 @@ version: "3.2"
 services:
 
   docker-academy-frontend:
-    build: .
+    build:
+      context: ./Frontend
+      dockerfile: Frontend/Dockerfile
     ports:
       - "80:80"

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
 echo "******************"
-docker-compose -f Backend/docker-compose.01.yml -f Frontend/docker-compose.01.yml config
+docker-compose -f docker-compose-backend.01.yml -f docker-compose-frontend.01.yml config
 
