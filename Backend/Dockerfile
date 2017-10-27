@@ -2,7 +2,6 @@ FROM golang
 EXPOSE 8000
 RUN mkdir /app
 WORKDIR /app
-ADD bin bin
 ADD config config
 ADD src src
 ADD api_app.go api_app.go
