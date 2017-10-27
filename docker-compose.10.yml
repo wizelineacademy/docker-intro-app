@@ -2,7 +2,6 @@ version: "3.2"
 services:
 
   docker-academy-backend:
-    container_name: docker-academy-backend
     build:
       context: ./Backend
       dockerfile: Dockerfile.prod

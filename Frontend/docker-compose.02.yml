@@ -1,5 +1,7 @@
-version: "3"
+version: "3.2"
 services:
 
   docker-academy-frontend:
     build: .
+      context: ./Frontend
+      dockerfile: Dockerfile

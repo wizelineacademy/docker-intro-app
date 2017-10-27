@@ -6,10 +6,11 @@ echo "******************"
 docker-compose version
 echo "******************"
 
+
 docker-compose -f docker-compose.10.yml config
 echo "******************"
 
-docker-compose -f docker-compose.10.yml up -d
+docker-compose  -f docker-compose.10.yml up -d
 echo "******************"
 
 docker ps
