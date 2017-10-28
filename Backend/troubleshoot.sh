@@ -2,6 +2,9 @@
 
 # set -x
 
+# To monitor container locally you may use a tool such as:
+# pip install glances[docker]
+
 RUN_SECTION=$1
 
 p_instructions(){
@@ -53,6 +56,7 @@ if [[ $RUN_SECTION == "1" ]]; then
 
   # Print the logs to get insights of errors.
   p_instructions "Print the logs to get insights of errors."
+  set -x
   docker logs $CONTAINER_ID
   echo ""
   docker ps -a
@@ -82,7 +86,8 @@ fi
 
 if [[ $RUN_SECTION == "3" ]]; then
   # Override CMD and enter container.
-  p_instructions "Override CMD and enter container. we can run /bin/api inside"
+  p_instructions "Override CMD and enter container. we can run bin/api inside"
+  set -x
   docker run -it --rm docker-academy-backend /bin/bash
   exit
 fi
