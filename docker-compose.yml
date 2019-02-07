@@ -29,13 +29,6 @@ services:
       options:
         max-size: "200k"
         max-file: "10"
-    sysctls:
-      net.core.somaxconn: 1024
-    ulimits:
-      nproc: 65535
-      nofile:
-        soft: 20000
-        hard: 40000
     restart: on-failure
     command: ["./bin/api"]
 
@@ -65,13 +58,6 @@ services:
       options:
         max-size: "200k"
         max-file: "10"
-    sysctls:
-      net.core.somaxconn: 1024
-    ulimits:
-      nproc: 65535
-      nofile:
-        soft: 20000
-        hard: 40000
     restart: on-failure
     depends_on:
       - "docker-academy-backend"
