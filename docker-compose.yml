@@ -4,7 +4,7 @@ services:
   docker-academy-backend:
     build:
       context: ./Backend
-      dockerfile: Dockerfile.prod
+      dockerfile: Dockerfile
       cache_from:
         - alpine:latest
         - golang:1.9.1
@@ -43,7 +43,7 @@ services:
     container_name: docker-academy-frontend
     build:
       context: ./Frontend
-      dockerfile: Dockerfile.prod
+      dockerfile: Dockerfile
       cache_from:
         - nginx:alpine
         - mhart/alpine-node:8
