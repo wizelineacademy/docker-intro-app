@@ -33,12 +33,12 @@ export default {
         confirmButtonText: 'Yes, delete it!',
         closeOnConfirm: false
       })
-      .then((willDelete) => {
+        .then((willDelete) => {
         // have API do a post to create the todo
-        if (willDelete) {
-          this.deleteTodo(todo)
-        }
-      })
+          if (willDelete) {
+            this.deleteTodo(todo)
+          }
+        })
     },
     updateItem (updatedtodo) {
       this.updateTodo(updatedtodo)
