@@ -1,7 +1,0 @@
-bin
-.vendor
-vendor
-Goopfile.lock
-.DS_Store
-/pkg
-/src/github.com

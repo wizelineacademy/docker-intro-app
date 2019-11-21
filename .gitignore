@@ -1,18 +1,25 @@
-.DS_Store
+# See https://help.github.com/articles/ignoring-files/
 
-# Binaries for programs and plugins
+### Related to NodeJS
+# built code
+dist/
+
+# dependencies
+node_modules/
+
+# logs
+*.log
+
+# test coverage
+coverage/
+
+### Related to Go
+# binaries
 *.exe
+*.exe~
 *.dll
 *.so
 *.dylib
 
-# Test binary, build with `go test -c`
+# test binary - built with `go test -c`
 *.test
-
-# Output of the go coverage tool, specifically when used with LiteIDE
-*.out
-
-# Project-local glide cache, RE: https://github.com/Masterminds/glide/issues/736
-.glide/
-
-.idea

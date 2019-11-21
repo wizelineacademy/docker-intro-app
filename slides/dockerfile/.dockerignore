@@ -1,0 +1,14 @@
+# dependencies
+node_modules/
+
+# build files
+dist/
+
+# Git files
+.git/
+
+# log files
+*.log
+
+# Docker files
+Dockerfile
