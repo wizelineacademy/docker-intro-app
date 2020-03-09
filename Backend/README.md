@@ -16,6 +16,13 @@ Run The api
 $ make run
 ```
 
+### Modify DB connection
+
+The app has the following config env variables
+
+MONGODB_PORT_27017_TCP_ADDR : Address to the Mongo DB host
+MONGODB_PORT_27017_TCP_PORT : Port to connect to the Mongo DB
+
 
 ### Test Application
 
