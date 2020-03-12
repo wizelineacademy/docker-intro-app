@@ -27,6 +27,16 @@ npm run e2e
 npm test
 ```
 
+### App Config
+
+The application has the following env variables for configuration
+
+API_PORT_8000_TCP_ADDR : Backend API host address 
+
+API_PORT_8000_TCP_PORT : Backend API port where the api is running
+
+API_URL: Will replace API_PORT_8000_TCP_ADDR API_PORT_8000_TCP_PORT as the full API URL
+
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
 ### Pending Taks
