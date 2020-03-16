@@ -4,5 +4,5 @@ const port = process.env.API_PORT_8000_TCP_PORT || "8000";
 
 module.exports = {
   NODE_ENV: '"production"',
-  API_URL: `'http://${address}:${port}'`
+  API_URL: JSON.stringify(process.env.API_URL) || `'http://${address}:${port}'`
 }
